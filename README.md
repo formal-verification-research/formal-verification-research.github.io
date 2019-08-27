@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  
+<div class="container-fluid">
+  <h1>My First Bootstrap Page</h1>      
+  <p>This part is inside a .container-fluid class.</p> 
+  <p>The .container-fluid class provides a full width container, spanning the entire width of the viewport.</p>           
+</div>
+
+</body>
+</html>
+
+
 A PhD position is available (fully paid for 4 years with the possibility of extension) at the Electrical and Computer Engineering Department of Utah State University. The expected starting date is early January 2020. PhD application information is available at: https://engineering.usu.edu/ece/files/pdfs/ece-graduate-program-application-info.pdf
 
 Abstract:
