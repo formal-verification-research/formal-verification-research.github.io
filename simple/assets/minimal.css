@@ -138,3 +138,9 @@ h2 a {
 	padding: 30px; 
 	text-align: center;
 }
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
