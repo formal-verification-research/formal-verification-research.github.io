@@ -65,7 +65,8 @@ a:hover {
 }
 .big-title img {
 	margin-top: 20px;
-	width: 573px;
+	margin-bottom:12px;
+	width: 350px;
 	max-width: 90%;
 }
 .big-title h1 {
