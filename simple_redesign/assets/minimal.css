@@ -10,14 +10,14 @@ body {
 	max-width: 1000px;
 	background:white;
 	margin: 0 auto 0 auto;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 1.16em;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 1.06em;
 	color:#222222;
 	box-shadow: 0 0 15px grey;
 }
 
 p {
-	line-height:1.4em;
+	line-height:1.5em;
 }
 
 #wrapper {
@@ -143,4 +143,75 @@ h2 a {
 	html {
 		scroll-behavior: auto;
 	}
+}
+
+.citation {
+	border: 1px solid #5d959e;
+	padding: 0 1.5%;
+	margin-bottom: 1em;
+	padding-bottom:0.9em;
+	border-radius:0.2em;
+	background:#fdfdfd;
+}
+
+.citation a {
+	background:#baebf3;
+	border: 1px solid #163b41;
+	border-radius:0.2em;
+	padding:0.3em 0.5em;
+	line-height:0;
+	font-size:0.9em;
+	text-decoration: none;
+	color:#163b41 !important;
+	cursor: default;
+}
+
+.citation a:hover {
+	background:#088fa3;
+	color: #fff !important;
+}
+
+.bibtex {
+	background:#ededed;
+	border:1px solid #aaa;
+	border-radius:0.2em;
+	font-family: 'PT Mono', monospace;
+	font-size:0.75em;
+	padding:2%;
+	white-space: pre-line;
+	/* white-space: pre; */
+	line-height: 1.5em;
+
+}
+
+.citation span {
+	display:block;
+	margin-bottom:0.3em;
+}
+
+.citation .work {
+	font-weight:bold;
+	font-size:1.1em;
+}
+.citation .publication {
+	font-style:italic;
+}
+.citation .authors {
+	margin-bottom:1.4em;
+}
+
+.section h3 {
+	/* background-color: #baebf3; */
+	background-color: #eee;
+	color:#163b41;
+	border: 1px solid #163b41;
+	text-align:center;
+	border-radius:0.2em;
+	padding:0.25em;
+	/* font-weight: normal; */
+	font-size:1.15em;
+	width:4.2em;
+	/* width:18%; */
+	/* min-width:120px; */
+	margin-top:2em;
 }
