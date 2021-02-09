@@ -3,7 +3,7 @@
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en">
+<html lang="en" id="scroll_up">
 <!--<![endif]-->
 
 <head>
@@ -17,7 +17,7 @@
 
 	<title>USU Formal Verification Research</title>
 
-	<link rel="shortcut icon" href="assets/play.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="assets/logo/icon.ico" type="image/x-icon">
 
 	<!-- You can use any of the font awesome icons -->
 	<script src="https://kit.fontawesome.com/8c71a053cb.js" crossorigin="anonymous"></script>
@@ -43,28 +43,33 @@
 		<!-- header -->
 		<section id="top" class="heading">
 			<div class="row">
-				<div class="big-title text-center">
-					<img src="assets/logo_min_no_text.png" alt="USU Formal Verification Research Logo">
-					<h1>Formal Verification Research</h1>
-					<h2>Zhen Zhang's Research Group at Utah State University</h2>
-					<h3>Funded by the National Science Foundation</h3>
+				<div class="big-title">
+					<div id="header_frame">
+						<img src="assets/logo/logo.png" alt="USU Formal Verification Research Logo">
+						<div id="title">
+							<h1>Formal Verification Research</h1>
+							<h2>Zhen Zhang's Research Group at Utah State University</h2>
+							<h3>Funded by the National Science Foundation</h3>
+						</div>
+					</div>
 				</div><!-- title -->
 			</div><!-- row -->
 		</section><!-- section top -->
 
 		<!-- navbar -->
 		<ul class="nav">
-			<li><a href="#intro">About</a></li>
+			<li><a href="https://github.com/formal-verification-research">
+        <i class="fab fa-github"></i>&nbsp;Github</a></li>
+      <li><a href="#intro">About</a></li>
 			<li><a href="#faculty">Faculty</a></li>
 			<li><a href="#researchers">Researchers</a></li>
 			<li><a href="#publications">Publications</a></li>
-			<li><a href="#students">Students</a></li>
 			<li><a href="#software">Software</a></li>
 		</ul>
 
 
 
-		<section class="welcome section">
+		<section id = "intro" class="welcome section">
 			<div class="row">
 					<h2 class="dark-text">Introduction</h2>
 					<p>
@@ -83,17 +88,26 @@
 
 		<section id="faculty" class="section">
 			<div class="row">
-				<h2 class="dark-text">Faculty&nbsp;&nbsp;<a href="#top"><i class="fas fa-chevron-up"></i></a></h2>
-				<ul>
-					<li>No Listing Yet</li>                                  
-				</ul>
-				<p style="color:red">I could potentially put a bio for faculty members here? i.e. photo and job title, etc.</p>
+				<h2 class="dark-text">Faculty&nbsp;&nbsp;<a href="#scroll_up"><i class="fas fa-chevron-up"></i></a></h2>
+				
+				<div class="side_img">
+					<!-- <img src="assets/nsf_logo.png" /> -->
+					<p>
+						<span class="person"><strong>Zhen Zhang</strong> &vert; Utah State University </span>
+						<br />
+						My primary research interest is in the modeling and verification of concurrent and stochastic systems, ranging from 
+					asynchronous systems and distributed protocols to embedded software and biological systems. I am interested 
+					in developing theories and algorithms to advance techniques in the area of formal and semi-formal methods, 
+					and their applications in system diagnosis and embedded controller and parameter synthesis.
+					</p>
+					<div class="slimg"><img src="assets/zhang.jpg" /> </div>
+				</div>
 			</div>
 		</section>
 
 		<section id="researchers" class="section">  
 			<div class="row">
-				<h2 class="dark-text">Senior Researchers&nbsp;&nbsp;<a href="#top"><i class="fas fa-chevron-up"></i></a></h2>
+				<h2 class="dark-text">Researchers&nbsp;&nbsp;<a href="#scroll_up"><i class="fas fa-chevron-up"></i></a></h2>
 				<ul>
 					<li>No listing yet</li>
 				</ul>
@@ -102,7 +116,7 @@
 
 		<section id="publications" class="section">
 			<div class="row">
-				<h2 class="dark-text">Publications&nbsp;&nbsp;<a href="#top"><i class="fas fa-chevron-up"></i></a></h2>
+				<h2 class="dark-text">Publications&nbsp;&nbsp;<a href="#scroll_up"><i class="fas fa-chevron-up"></i></a></h2>
 				<p>
 					You can <a href="assets/references.bib" download="formal_verif_research_refs.bib">download a BibTeX file</a> that contains references to all of these papers.
 				</p>
@@ -111,6 +125,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c24-->
 					<p>
+						<span class="year">
+							2021
+						</span>
 						<span class="work">
 							On Correctness, Precision, and Performance in Quantitative Verification
 						</span>
@@ -122,7 +139,8 @@
 							<!-- Budde, Carlos E. and Hartmanns, Arnd and Klauck, Michaela and Kretinsky, Jan and Parker, David, and Quatmann, Tim and Turrini, Andrea and Zhang, Zhen -->
 						</span>
 					</p>
-					<a onclick="toggle('c24')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;&nbsp;Awaiting Publication
+					<a onclick="toggle('24')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;&nbsp;Awaiting Publication&nbsp;&nbsp;
+					<a   id="l24" onclick="copyBibtex('24')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
 					<a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c24" class="bibtex" style="display:none">
@@ -142,6 +160,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c23-->
 					<p>
+						<span class="year">
+							2020
+						</span>
 						<span class="work">
 							Genetic circuit hazard analys is using STAMINA
 						</span>
@@ -152,7 +173,8 @@
 							Lukas B&uuml;cherl, Jeanet Mante, Pedro Fontanarrosa, Zhen Zhang, Brett Jepsen, Riley Roberts, and Chris J. Myers
 						</span>
 					</p>
-					<a onclick="toggle('c23')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;&nbsp;Awaiting Publication
+					<a onclick="toggle('23')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;&nbsp;Awaiting Publication&nbsp;&nbsp;
+					<a   id="l23" onclick="copyBibtex('23')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
 					<a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c23" class="bibtex" style="display:none">
@@ -170,6 +192,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c22-->
 					<p>
+						<span class="year">
+							2020
+						</span>
 						<span class="work">
 							EFFORT: Enhancing Energy Efficiency and Error Resilience of a Near-Threshold Tensor Processing Unit
 						</span>
@@ -180,8 +205,9 @@
 							Noel Daniel, Tahmoures Shabanian, Prabal Basu, Koushik Chakraborty, Sanghamitra Roy, and Zhen Zhang
 						</span>
 					</p>
-					<a onclick="toggle('c22')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('22')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://ieeexplore.ieee.org/document/9045479" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l22" onclick="copyBibtex('22')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c22" class="bibtex" style="display:none">
 						@inproceedings{Noel2020,
@@ -200,6 +226,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c21-->
 					<p>
+						<span class="year">
+							2019
+						</span>
 						<span class="work">
 							Automated Reasoning for Systems Biology and Medicine
 						</span>
@@ -210,8 +239,9 @@
 							Pietro Li&ograve; and Paolo Zuliani, editors.
 						</span>
 					</p>
-					<a onclick="toggle('c21')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('21')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://link.springer.com/book/10.1007%2F978-3-030-17297-8" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l21" onclick="copyBibtex('21')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c21" class="bibtex" style="display:none">
 						@book{DBLP:series/cb/30,
@@ -236,6 +266,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c20-->
 					<p>
+						<span class="year">
+							2019
+						</span>
 						<span class="work">
 							Probabilistic Verification for Reliable Network-on-Chip System Design
 						</span>
@@ -246,8 +279,9 @@
 							Benjamin Lewis, Arnd Hartmanns, Prabal Basu, Rajesh JayashankaraShridevi, Koushik Chakraborty, Sanghamitra Roy, and Zhen Zhang
 						</span>
 					</p>
-					<a onclick="toggle('c20')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('20')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://link.springer.com/chapter/10.1007%2F978-3-030-27008-7_7" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l20" onclick="copyBibtex('20')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c20" class="bibtex" style="display:none">
 						@inproceedings{Lewis2019,
@@ -269,6 +303,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c19-->
 					<p>
+						<span class="year">
+							2019
+						</span>
 						<span class="work">
 							Synthetic Biology Open Language (SBOL) Version 2.3
 						</span>
@@ -276,11 +313,12 @@
 							Journal of Integrative Bioinformatics
 						</span>
 						<span class="authors">
-							Curtis Madsen, Angel Go&ntilde;i Moreno, Umesh P, Zachary Palchick, Nicholas Roehner, Christian Atallah, Bryan Bartley, Kiri Choi, Sidney Cox Robert, Thomas Gorochowski, Raik Gr{\"u}nberg, Chris Macklin, James McLaughlin, Xianwei Meng, Tramy Nguyen, Matthew Pocock, Meher Samineni, James Scott-Brown, Ysis Tarter, Michael Zhang, Zhen Zhang, Zach Zundel, Jacob Beal, Michael Bissell, Kevin Clancy, John H. Gennari, Goksel Misirli, Chris Myers, Ernst Oberortner, Herbert Sauro, and Anil Wipat
+							Curtis Madsen, Angel Go&ntilde;i Moreno, Umesh P, Zachary Palchick, Nicholas Roehner, Christian Atallah, Bryan Bartley, Kiri Choi, Sidney Cox Robert, Thomas Gorochowski, Raik Gr&uuml;nberg, Chris Macklin, James McLaughlin, Xianwei Meng, Tramy Nguyen, Matthew Pocock, Meher Samineni, James Scott-Brown, Ysis Tarter, Michael Zhang, Zhen Zhang, Zach Zundel, Jacob Beal, Michael Bissell, Kevin Clancy, John H. Gennari, Goksel Misirli, Chris Myers, Ernst Oberortner, Herbert Sauro, and Anil Wipat
 						</span>
 					</p>
-					<a onclick="toggle('c19')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('19')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://www.degruyter.com/view/j/jib.2019.16.issue-2/jib-2019-0025/jib-2019-0025.xml" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l19" onclick="copyBibtex('19')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c19" class="bibtex" style="display:none">
 						@article{Madsen2019,
@@ -307,6 +345,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c18-->
 					<p>
+						<span class="year">
+							2019
+						</span>
 						<span class="work">
 							Improving Deep Neural Network Verification Using Specification-Guided Search
 						</span>
@@ -317,8 +358,9 @@
 							Joshua Smith, Xiaowei Huang, Viswanathan Swaminathan, and Zhen Zhang
 						</span>
 					</p>
-					<a onclick="toggle('c18')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('18')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://www.researchgate.net/publication/334456900_Improving_Deep_Neural_Network_Verification_Using_Specification-Guided_Search" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l18" onclick="copyBibtex('18')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c18" class="bibtex" style="display:none">
 						@inproceedings{Smith2019,
@@ -334,6 +376,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c17-->
 					<p>
+						<span class="year">
+							2019
+						</span>
 						<span class="work">
 							Approximation Techniques for Stochastic Analysis of Biological Systems
 						</span>
@@ -344,8 +389,9 @@
 							Thakur Neupane, Zhen Zhang, Curtis Madsen, Hao Zheng, and Chris J. Myers
 						</span>
 					</p>
-					<a onclick="toggle('c17')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('17')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://link.springer.com/chapter/10.1007%2F978-3-030-17297-8_12" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l17" onclick="copyBibtex('17')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c17" class="bibtex" style="display:none">
 						@incollection{Neupane2019,
@@ -372,6 +418,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c16-->
 					<p>
+						<span class="year">
+							2019
+						</span>
 						<span class="work">
 							iBioSim 3: A Tool for Model-Based Genetic Circuit Design
 						</span>
@@ -382,8 +431,9 @@
 							Leandro Watanabe, Tramy Nguyen, Michael Zhang, Zach Zundel, Zhen Zhang, Curtis Madsen, Nicholas Roehner, and Chris Myers
 						</span>
 					</p>
-					<a onclick="toggle('c16')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('16')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://pubs.acs.org/doi/10.1021/acssynbio.8b00078" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l16" onclick="copyBibtex('16')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c16" class="bibtex" style="display:none">
 						@article{Watanabe2019,
@@ -407,6 +457,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c15-->
 					<p>
+						<span class="year">
+							2019
+						</span>
 						<span class="work">
 							STAMINA: STochastic Approximate Model-Checker for INfinite-State Analysi
 						</span>
@@ -417,8 +470,9 @@
 							Thakur Neupane, Chris J. Myers, Curtis Madsen, Hao Zheng, and Zhen Zhang
 						</span>
 					</p>
-					<a onclick="toggle('c15')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('15')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://link.springer.com/chapter/10.1007%2F978-3-030-25540-4_31" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l15" onclick="copyBibtex('15')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c15" class="bibtex" style="display:none">
 						@inproceedings{Neupane2019a,
@@ -443,6 +497,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c14-->
 					<p>
+						<span class="year">
+							2018
+						</span>
 						<span class="work">
 							Synthetic Biology Open Language (SBOL) Version 2.2.0
 						</span>
@@ -450,12 +507,12 @@
 							Journal of Integrative Bioinformatics
 						</span>
 						<span class="authors">
-							Cox Robert Sidney, Madsen Curtis, McLaughlin James Alastair, Nguyen Tramy, Roehner Nicholas, Bartley Bryan, Beal Jacob, Bissell Michael, Choi Kiri, Clancy Kevin, Gr{\"u}nberg Raik, Macklin Chris, Misirli Goksel, Oberortner Ernst, Pocock Matthew, Samineni Meher, Zhang Michael, Zhang Zhen, Zundel Zach, Gennari John H., Myers Chris, Sauro Herbert, and Wipat Anil
+							Cox Robert Sidney, Madsen Curtis, McLaughlin James Alastair, Nguyen Tramy, Roehner Nicholas, Bartley Bryan, Beal Jacob, Bissell Michael, Choi Kiri, Clancy Kevin, Gr&uuml;nberg Raik, Macklin Chris, Misirli Goksel, Oberortner Ernst, Pocock Matthew, Samineni Meher, Zhang Michael, Zhang Zhen, Zundel Zach, Gennari John H., Myers Chris, Sauro Herbert, and Wipat Anil
 						</span>
 					</p>
-					<a onclick="toggle('c14')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('14')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://www.degruyter.com/view/journals/jib/15/1/article-20180001.xml" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
-					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
+					<a   id="l14" onclick="copyBibtex('14')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<pre id="c14" class="bibtex" style="display:none">
 						@article{Cox2018,
 							Author = {Sidney, Cox Robert and Curtis, Madsen and Alastair, McLaughlin James and Tramy, Nguyen and Nicholas, Roehner and Bryan, Bartley and Jacob, Beal and Michael, Bissell and Kiri, Choi and Kevin, Clancy and Raik, Gr{\"u}nberg and Chris, Macklin and Goksel, Misirli and Ernst, Oberortner and Matthew, Pocock and Meher, Samineni and Michael, Zhang and Zhen, Zhang and Zach, Zundel and H., Gennari John and Chris, Myers and Herbert, Sauro and Anil, Wipat},
@@ -474,12 +531,14 @@
 				</div>
 				<!-- End copy here -->
 
-
 				<h3>2017</h3>
 
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c13-->
 					<p>
+						<span class="year">
+							2017
+						</span>
 						<span class="work">
 							A Validator and Converter for the Synthetic Biology Open Language
 						</span>
@@ -490,8 +549,9 @@
 							Zach Zundel, Meher Samineni, Zhen Zhang, and Chris J. Myers
 						</span>
 					</p>
-					<a onclick="toggle('c13')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('13')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://pubs.acs.org/doi/10.1021/acssynbio.6b00277" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l13" onclick="copyBibtex('13')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c13" class="bibtex" style="display:none">
 						@article{Zundel2017,
@@ -519,6 +579,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c12-->
 					<p>
+						<span class="year">
+							2016
+						</span>
 						<span class="work">
 							An improved fault-tolerant routing algorithm for a Network-on-Chip derived with formal analysis
 						</span>
@@ -529,8 +592,9 @@
 							Zhen Zhang, Wendelin Serwe, Jian Wu, Tomohiro Yoneda, Hao Zheng, and Chris Myers
 						</span>
 					</p>
-					<a onclick="toggle('c12')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('12')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://www.sciencedirect.com/science/article/pii/S0167642316000125?via%3Dihub" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l12" onclick="copyBibtex('12')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c12" class="bibtex" style="display:none">
 						@article{Zhang2016,
@@ -559,6 +623,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c11-->
 					<p>
+						<span class="year">
+							2015
+						</span>
 						<span class="work">
 							Sharing Structure and Function in Biological Design with SBOL 2.0
 						</span>
@@ -566,11 +633,12 @@
 							ACS Synthetic Biology
 						</span>
 						<span class="authors">
-							Nicholas Roehner, Jacob Beal, Kevin Clancy, Bryan Bartley, Goksel Misirli, Raik Gr{\"u}nberg, Ernst Oberortner, Matthew Pocock, Michael Bissell, Curtis Madsen, Tramy Nguyen, Michael Zhang, Zhen Zhang, Zach Zundel, Douglas Densmore, John H. Gennari, Anil Wipat, Herbert M. Sauro, and Chris J. Myers
+							Nicholas Roehner, Jacob Beal, Kevin Clancy, Bryan Bartley, Goksel Misirli, Raik Gr&uuml;nberg, Ernst Oberortner, Matthew Pocock, Michael Bissell, Curtis Madsen, Tramy Nguyen, Michael Zhang, Zhen Zhang, Zach Zundel, Douglas Densmore, John H. Gennari, Anil Wipat, Herbert M. Sauro, and Chris J. Myers
 						</span>
 					</p>
-					<a onclick="toggle('c11')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('11')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://pubs.acs.org/doi/10.1021/acssynbio.5b00215" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l11" onclick="copyBibtex('11')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c11" class="bibtex" style="display:none">
 						@article{Roehner2015a,
@@ -595,6 +663,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c10-->
 					<p>
+						<span class="year">
+							2015
+						</span>
 						<span class="work">
 							Efficient Analysis Methods in Synthetic Biology
 						</span>
@@ -605,8 +676,9 @@
 							Curtis Madsen, Chris Myers, Nicholas Roehner, Chris Winstead, and Zhen Zhang
 						</span>
 					</p>
-					<a onclick="toggle('c10')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('10')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://link.springer.com/protocol/10.1007%2F978-1-4939-1878-2_11" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l10" onclick="copyBibtex('10')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c10" class="bibtex" style="display:none">
 						@inbook{Madsen2015,
@@ -631,6 +703,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c9-->
 					<p>
+						<span class="year">
+							2015
+						</span>
 						<span class="work">
 							Synthetic Biology Open Language (SBOL) Version 2.0.0
 						</span>
@@ -641,8 +716,9 @@
 							Bartley Bryan, Beal Jacob, Clancy Kevin, Misirli Goksel, Roehner Nicholas, Oberortner Ernst, Pocock Matthew, Bissell Michael, Madsen Curtis, Nguyen Tramy, Zhang Zhen, Gennari John H., Myers Chris, Wipat Anil, and Sauro Herbert
 						</span>
 					</p>
-					<a onclick="toggle('c9')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('9')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://www.degruyter.com/view/journals/jib/12/2/article-p902.xml" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l9" onclick="copyBibtex('9')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c9" class="bibtex" style="display:none">
 						@article{Bartley2015,
@@ -666,6 +742,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c8-->
 					<p>
+						<span class="year">
+							2015
+						</span>
 						<span class="work">
 							Generating Systems Biology Markup Language Models from the Synthetic Biology Open Language
 						</span>
@@ -676,8 +755,9 @@
 							Nicholas Roehner, Zhen Zhang, Tramy Nguyen, and Chris J. Myers
 						</span>
 					</p>
-					<a onclick="toggle('c8')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('8')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://pubs.acs.org/doi/10.1021/sb5003289" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l8" onclick="copyBibtex('8')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c8" class="bibtex" style="display:none">
 						@article{Roehner2015,
@@ -702,6 +782,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c7-->
 					<p>
+						<span class="year">
+							2015
+						</span>
 						<span class="work">
 							libSBOLj 2.0: A Java Library to Support SBOL 2.0
 						</span>
@@ -712,8 +795,9 @@
 							Z. Zhang, T. Nguyen, N. Roehner, G. Misirli, M. Pocock, E. Oberortner, M. Samineni, Z. Zundel, J. Beal, K. Clancy, A. Wipat and C. J. Myers
 						</span>
 					</p>
-					<a onclick="toggle('c7')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('7')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://ieeexplore.ieee.org/document/7440806/" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l7" onclick="copyBibtex('7')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c7" class="bibtex" style="display:none">
 						@article{Zhang2015,
@@ -738,6 +822,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c6-->
 					<p>
+						<span class="year">
+							2015
+						</span>
 						<span class="work">
 							Compositional Model Checking of Concurrent Systems
 						</span>
@@ -748,8 +835,9 @@
 							H. Zheng, Z. Zhang, C. J. Myers, E. Rodriguez and Y. Zhang
 						</span>
 					</p>
-					<a onclick="toggle('c6')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('6')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://ieeexplore.ieee.org/document/6858024" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l6" onclick="copyBibtex('6')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c6" class="bibtex" style="display:none">
 						@article{Zheng2015,
@@ -777,6 +865,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c5-->
 					<p>
+						<span class="year">
+							2014
+						</span>
 						<span class="work">
 							Formal Analysis of a Fault-Tolerant Routing Algorithm for a Network-on-Chip
 						</span>
@@ -787,8 +878,9 @@
 							Zhen Zhang, Wendelin Serwe, Jian Wu, Tomohiro Yoneda, Hao Zheng, and Chris Myers
 						</span>
 					</p>
-					<a onclick="toggle('c5')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('5')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://www.sciencedirect.com/science/article/pii/S0167642316000125?pes=vor" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l5" onclick="copyBibtex('5')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c5" class="bibtex" style="display:none">
 						@inproceedings{Zhang2014,
@@ -810,6 +902,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c4-->
 					<p>
+						<span class="year">
+							2014
+						</span>
 						<span class="work">
 							Stochastic Model Checking of Genetic Circuits
 						</span>
@@ -820,8 +915,9 @@
 							Curtis Madsen, Zhen Zhang, Nicholas Roehner, and Chris Winstead and Chris Myers
 						</span>
 					</p>
-					<a onclick="toggle('c4')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('4')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://dl.acm.org/doi/10.1145/2644817" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l4" onclick="copyBibtex('4')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c4" class="bibtex" style="display:none">
 						@article{Madsen2014,
@@ -856,6 +952,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c3-->
 					<p>
+						<span class="year">
+							2012
+						</span>
 						<span class="work">
 							Utilizing stochastic model checking to analyze genetic circuits
 						</span>
@@ -866,8 +965,9 @@
 							C. Madsen, C. J. Myers, N. Roehner, C. Winstead and Z. Zhang
 						</span>
 					</p>
-					<a onclick="toggle('c3')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('3')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://ieeexplore.ieee.org/document/6217255" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l3" onclick="copyBibtex('3')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c3" class="bibtex" style="display:none">
 						@inproceedings{Madsen2012,
@@ -892,6 +992,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c2-->
 					<p>
+						<span class="year">
+							2011
+						</span>
 						<span class="work">
 							A Fault-Tolerant Routing Algorithm for a Network-on-Chip Using a Link Fault Model
 						</span>
@@ -902,8 +1005,9 @@
 							Jian Wu, Zhen Zhang and Chris Myers
 						</span>
 					</p>
-					<a onclick="toggle('c2')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('2')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="https://api.semanticscholar.org/CorpusID:5544094" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;
+					<a   id="l2" onclick="copyBibtex('2')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c2" class="bibtex" style="display:none">
 						@misc{Wu2011,
@@ -924,6 +1028,9 @@
 				<!-- To duplicate, start copy here -->
 				<div class="citation"> <!--c1-->
 					<p>
+						<span class="year">
+							2008
+						</span>
 						<span class="work">
 							Performance Analysis of Two Synchronizers
 						</span>
@@ -934,8 +1041,9 @@
 							Z. Zhang and J. Garside
 						</span>
 					</p>
-					<a onclick="toggle('c1')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
+					<a onclick="toggle('1')">BibTeX&nbsp;<i class="far fa-file-alt"></i></a>&nbsp;
 					<a href="http://apt.cs.manchester.ac.uk/ftp/pub/apt/papers/AsyncForum08_ZZhang.pdf" target="_blank">View Paper&nbsp;<i class="far fa-file-pdf"></i></a>&nbsp;
+					<a   id="l1" onclick="copyBibtex('1')" class="copylk" style="display:none;">Copy BibTeX&nbsp;<i class="far fa-copy"></i></a>
 					<!-- <a href="#" target="_blank">Download&nbsp;<i class="far fa-file-pdf"></i></a> -->
 					<pre id="c1" class="bibtex" style="display:none">
 						@inproceedings{Zhang2008,
@@ -948,25 +1056,14 @@
 					</pre>
 				</div>
 				<!-- End copy here -->
-				
 
+				
 			</div> <!-- end row -->
 		</section>
 
-		<section id="students" class="section">
-			<div class="row">
-				<h2 class="dark-text">Students&nbsp;&nbsp;<a href="#top"><i class="fas fa-chevron-up"></i></a></h2>
-				<ul>
-					<li>
-						No Listing Yet
-					</li>
-				</ul>
-			</div>
-		</section>
-		
 		<section id="software" class="section">
 			<div class="row">
-				<h2 class="dark-text">Software&nbsp;&nbsp;<a href="#top"><i class="fas fa-chevron-up"></i></a></h2>
+				<h2 class="dark-text">Software&nbsp;&nbsp;<a href="#scroll_up"><i class="fas fa-chevron-up"></i></a></h2>
 					<ul>
 						<li>No listing yet</li>
 					</ul>
@@ -975,22 +1072,27 @@
 
     <section id="nsf" class="section">
 			<div class="row">
-        <h2 class="dark-text">NSF Acknowledgements &nbsp;&nbsp;<a href="#top"><i class="fas fa-chevron-up"></i></a></h2>
-					<p>
-						This material is based upon work supported by the National Science Foundation under Grant No. 1856740. 
-						Any opinions, findings, and conclusions or recommendations expressed in this material are those of the 
-						author(s) and do not necessarily reflect the views of the National Science Foundation.
-					</p>
+        <h2 class="dark-text">NSF Acknowledgements &nbsp;&nbsp;<a href="#scroll_up"><i class="fas fa-chevron-up"></i></a></h2>
+          <div class="side_img">
+            <!-- <img src="assets/nsf_logo.png" /> -->
+            <p style="padding-top:18px;">
+              This material is based upon work supported by the National Science Foundation under Grant No. 1856740. 
+              Any opinions, findings, and conclusions or recommendations expressed in this material are those of the 
+              author(s) and do not necessarily reflect the views of the National Science Foundation.
+            </p>
+            <div class="slimg"><img src="assets/nsf_logo.png" /></div>
+          </div>
       </div>
     </section>
 
 	</div><!-- wrapper -->
 	
-	<div style="height:30px"></div>
+	<div style="height:30px;clear:both;"></div>
 
 	</body>
 	<div id="footer">
-		<p>&copy; All rights reserved 2020.</p>
+		<a href="https://engineering.usu.edu/ece/" target="_blank"><img src="assets/ece-logo.png" /></a>
+		<p>&copy;  <script>document.write(new Date().getFullYear())</script> Utah State University. All Rights Reserved.</p>
 	</div>
 
 </html>
