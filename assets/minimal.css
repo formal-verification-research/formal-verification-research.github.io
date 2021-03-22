@@ -65,6 +65,8 @@ h2 a {
 	padding-bottom: 7px;
 	/* padding-left: 1%; */
 	color: #163b41;
+	clear:both;
+	display:block;
 }
 
 .section ul {
@@ -180,20 +182,76 @@ h2 a {
 	font-weight:bold;
 }
 
+.project {
+	border: 1px solid #5d959e;
+	padding: 0 0.9em 1.1em 0.9em;
+	margin-bottom: 1em;
+	/* padding-bottom:0.9em; */
+	border-radius:0.2em;
+	background:#fdfdfd;
+}
+
+.project a {
+	background:#baebf3;
+	border: 1px solid #163b41;
+	border-radius:0.2em;
+	padding:0.3em 0.5em;
+	line-height:0;
+	font-size:0.9em;
+	text-decoration: none;
+	color:#163b41 !important;
+	cursor: default;
+}
+
+.project a:hover {
+	background:#088fa3;
+	color: #fff !important;
+}
+
+.project span {
+	display:block;
+	margin-bottom:0.3em;
+}
+
+.project .projectname {
+	font-weight:bold;
+	font-size:1.1em;
+}
+
+.project .students {
+	font-style:italic;
+}
+
+.project .description {
+	margin-bottom:1.4em;
+}
+
+.project .year {
+	float:right;
+	margin:-1em -0.9em 6em 0.5em;
+	padding:0.3em 0.5em;
+	background-color: #ddd;
+	color:#163b41;
+	border-bottom: 1px solid #5d959e;
+	border-left:  1px solid #5d959e;
+	border-radius: 0 0.175em 0 0.175em;
+	font-weight:bold;
+}
+
 .section h3 {
-	/* background-color: #baebf3; */
 	background-color: #eee;
 	color:#163b41;
 	border: 1px solid #163b41;
-	text-align:center;
+	/* text-align:center; */
 	border-radius:0.2em;
-	padding:0.25em;
-	/* font-weight: normal; */
+	padding: 0.25em 0.75em;
 	font-size:1.15em;
-	width:4.2em;
-	/* width:18%; */
-	/* min-width:120px; */
 	margin-top:2em;
+}
+
+#publications h3 {
+	width:4.2em;
+	text-align:center;
 }
 
 .person {
