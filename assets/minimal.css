@@ -252,6 +252,7 @@ h2 a {
 #publications h3 {
 	width:4.2em;
 	text-align:center;
+	display: inline-block;
 }
 
 .person {
@@ -389,4 +390,30 @@ h2 a {
 textarea {
   position: absolute;
   left: -200%;
+}
+
+
+#years a {
+	background:#baebf3;
+	border: 1px solid #163b41;
+	border-radius:0.2em;
+	padding:0.3em 0.5em;
+	line-height:0;
+	font-size:0.9em;
+	text-decoration: none;
+	color:#163b41 !important;
+	cursor: default;
+}
+
+#years a:hover {
+	background:#088fa3;
+	color: #fff !important;
+}
+
+a.pubtop {
+	text-align: right;
+	display:inline;
+	float: right;
+	margin-top: 2.8em;
+	margin-right: 10px;
 }
