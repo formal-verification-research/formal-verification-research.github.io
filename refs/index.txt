@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" id="scroll_up">
+<!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="Zhen Zhang's Research Group at Utah State University">
+	<meta name="author" content="Utah State University">
+	<meta name="keywords" content="">
+
+	<title>USU Formal Verification Research</title>
+
+	<link rel="shortcut icon" href="assets/logo/icon.ico" type="image/x-icon">
+
+	<!-- You can use any of the font awesome icons -->
+	<script src="https://kit.fontawesome.com/8c71a053cb.js" crossorigin="anonymous"></script>
+	<script src="assets/scripts/toggle.js"></script>
+	
+	<!-- Fonts from Google: -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Mono&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="assets/minimal.css">
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+		<!-- header -->
+		<section id="top" class="heading">
+			<div class="row">
+				<div class="big-title">
+					<div id="header_frame">
+						<img src="assets/logo/logo.png" alt="USU Formal Verification Research Logo">
+						<div id="title">
+							<h1>Formal Verification Research</h1>
+							<h2>Zhen Zhang's Research Group at Utah State University</h2>
+							<h3>Funded by the National Science Foundation</h3>
+						</div>
+					</div>
+				</div><!-- title -->
+			</div><!-- row -->
+		</section><!-- section top -->
+
+		<!-- navbar -->
+		<ul class="nav">
+			<li><a href="https://github.com/formal-verification-research">
+        <i class="fab fa-github"></i>&nbsp;Github</a></li>
+      <li><a href="#intro">About</a></li>
+			<li><a href="#faculty">Faculty</a></li>
+			<!-- <li><a href="#projects">Projects</a></li> -->
+			<li><a href="#publications">Publications</a></li>
+			<!-- <li><a href="#software">Software</a></li> -->
+		</ul>
+
+
+
+		<section id = "intro" class="welcome section">
+			<div class="row">
+					<h2 class="dark-text">Introduction</h2>
+					<p>
+						We use formal methods to verify a variety of systems. Our projects include 
+						<a href="https://github.com/fluentverification/stamina" target="_blank">STAMINA</a>, neural network 
+						verification, network-on-chip verification, and others. Our publications are listed below, and
+						our projects are at 
+						<a href="https://github.com/formal-verification-research" target="_blank">Github</a>.
+					</p>
+					<div class="bigIcon">
+						<a href="https://github.com/formal-verification-research" target="_blank">
+							<p><i class="fab fa-github"></i><span>Find us on Github</span></p>
+						</a>
+					</div>
+				</div>
+		</section>
+
+		<section id="faculty" class="section">
+			<div class="row">
+				<h2 class="dark-text">Faculty&nbsp;&nbsp;<a href="#scroll_up"><i class="fas fa-chevron-up"></i></a></h2>
+				
+				<div class="side_img">
+					<p>
+						<span class="person"><strong>Zhen Zhang</strong> &vert; Utah State University </span>
+						<br />
+						My primary research interest is in the modeling and verification of concurrent and stochastic systems, ranging from 
+					asynchronous systems and distributed protocols to embedded software and biological systems. I am interested 
+					in developing theories and algorithms to advance techniques in the area of formal and semi-formal methods, 
+					and their applications in system diagnosis and embedded controller and parameter synthesis.
+					</p>
+					<div class="slimg"><img src="assets/zhang.jpg" /> </div>
+				</div>
+			</div>
+		</section>
+
+		<section id="publications" class="section">
+			<div class="row">
+				<h2 class="dark-text">Publications&nbsp;&nbsp;<a href="#scroll_up"><i class="fas fa-chevron-up"></i></a></h2>
+
+$CITATIONS
+
+			</div> <!-- end row -->
+		</section>
+
+    <section id="nsf" class="section">
+			<div class="row">
+        <h2 class="dark-text">Acknowledgements &nbsp;&nbsp;<a href="#scroll_up"><i class="fas fa-chevron-up"></i></a></h2>
+          <div class="side_img">
+            <!-- <img src="assets/nsf_logo.png" /> -->
+            <p style="padding-top:18px;">
+              This material is based upon work supported by the National Science Foundation under Grant No. 1856740. 
+              Any opinions, findings, and conclusions or recommendations expressed in this material are those of the 
+              author(s) and do not necessarily reflect the views of the National Science Foundation.
+            </p>
+            <div class="slimg"><img src="assets/nsf_logo.png" /></div>
+          </div>
+					<p>This research is generously supported by <a href="https://research.adobe.com/" target="_blank">Adobe Research</a>.</p>
+      </div>
+    </section>
+
+	</div><!-- wrapper -->
+	
+	<div style="height:30px;clear:both;"></div>
+
+	</body>
+	<div id="footer">
+		<a href="https://engineering.usu.edu/ece/" target="_blank"><img src="assets/ece-logo.png" /></a>
+		<p>&copy;  <script>document.write(new Date().getFullYear())</script> Utah State University. All Rights Reserved.</p>
+	</div>
+
+</html>
