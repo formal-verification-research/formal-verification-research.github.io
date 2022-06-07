@@ -1,4 +1,8 @@
+from cgitb import text
 import bibtexparser
+from bibtexparser.bwriter import BibTexWriter
+from bibtexparser.bibdatabase import BibDatabase
+
 
 def fix_special(s):  
   s = s.replace("\\textbf", "")
@@ -49,15 +53,31 @@ def fix_special(s):
 
 
 
-bibfile = input("Name of the bibtex file: ")
-template = input("Name of the HTML template file: ")
-outfile = input("Name of the desired output file: ")
+bibfile = input("Name of the input bibtex file: ")
+# template = input("Name of the HTML template file: ")
+template = "index.txt"
+outfile = input("Name of the desired output HTML file: ")
 
 with open(bibfile, 'r') as bibtex_file:
   bib_database = bibtexparser.load(bibtex_file)
 
 sorted_bib_html = []
 years = []
+
+with open("../refs.bib", "w") as newbib:
+  texwriter = BibTexWriter()
+  texwriter.indent = "\t"
+  newbib.write(texwriter.write(bib_database))
+  # newbib.write("\t\t\t\t\t\t" + texwriter.write(bib_database).replace("\n","\n\t\t\t\t\t\t"))
+
+# with open("sorted2.bib", "w") as newbib:
+#   for bib in bib_database.entries:
+#     db = BibDatabase()
+#     db.entries = [bib]
+#     texwriter = BibTexWriter()
+#     texwriter.indent = "\t\t\t\t\t\t"
+#     newbib.write(texwriter.write(db))
+
 
 with open(outfile, 'w') as new:
   with open(template, 'r') as templ:
@@ -114,7 +134,7 @@ with open(outfile, 'w') as new:
           else:
             _authors = _authors + ", " + fixedauth[i]
     else:
-      _authors = "Authors Unlisted"
+      _authors = ""
     if "url" in bib.keys():
       _url = bib["url"]
       _url = '<a href="' + _url + '" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;'
@@ -129,7 +149,14 @@ with open(outfile, 'w') as new:
     bib.pop("date-modified", None)
     bib.pop("date-added", None)
     bib.pop("keywords", None)
-    _tex = str(bib).replace("', ", "',\n\t\t\t\t\t\t").replace("}}", "}\n\t\t\t\t\t}")
+
+    db = BibDatabase()
+    db.entries = [bib]
+    texwriter = BibTexWriter()
+    texwriter.indent = "\t"
+    # newbib.write(texwriter.write(db))
+    _tex = texwriter.write(db).replace("\n\n","")
+    # _tex = str(bib).replace("', ", "',\n\t\t\t\t\t\t").replace("}}", "}\n\t\t\t\t\t}")
     with open("parse.html", 'r') as orig:
       x = ""
       for line in orig:
@@ -146,7 +173,7 @@ with open(outfile, 'w') as new:
   sorted_bib_html.reverse()
 
   new.write('\t\t\t\t<p>\n')
-  new.write('\t\t\t\t\tYou can <a href="refs/' + bibfile + '" download="formal_verif_research_refs.bib">download a BibTeX file</a> that contains references to all of these papers.\n')
+  new.write('\t\t\t\t\tYou can <a href="refs.bib" download="refs.bib">download a BibTeX file</a> that contains references to all of these papers.\n')
   new.write('\t\t\t\t</p>\n\n')
 
   new.write('\t\t\t\t<p id="years">\n')
