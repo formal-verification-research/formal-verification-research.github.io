@@ -8,6 +8,8 @@ def fix_special(s):
   s = s.replace("\\textbf", "")
   s = s.replace("{", "")
   s = s.replace("}", "")
+
+  s = s.replace('~', " ")
   
   s = s.replace("\\'a", "&aacute;")
   s = s.replace("\\'e", "&eacute;")
@@ -44,6 +46,7 @@ def fix_special(s):
   s = s.replace('\\"i', "&iuml;")
   s = s.replace('\\"o', "&ouml;")
   s = s.replace('\\"u', "&uuml;")
+
 
   s = s.replace('\\vr', "r")
 
@@ -155,7 +158,7 @@ with open(outfile, 'w') as new:
     texwriter = BibTexWriter()
     texwriter.indent = "\t"
     # newbib.write(texwriter.write(db))
-    _tex = texwriter.write(db).replace("\n\n","")
+    _tex = texwriter.write(db).replace("\n\n","").strip()
     # _tex = str(bib).replace("', ", "',\n\t\t\t\t\t\t").replace("}}", "}\n\t\t\t\t\t}")
     with open("parse.html", 'r') as orig:
       x = ""
