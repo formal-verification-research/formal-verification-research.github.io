@@ -24,7 +24,7 @@ function copyBibtex(name) {
   but.innerHTML = 'BibTeX Copied&nbsp;<i class="fas fa-check"></i>';
   but.style.background = "#088fa3";
   setTimeout( function() {
-    but.innerHTML = 'Copy BibTeX&nbsp;<i class="far fa-copy"></i>';
+    but.innerHTML = 'Copy &nbsp;<i class="far fa-copy"></i>';
     but.style.background = "#baebf3";},
-    1000);
+    3000);
 }

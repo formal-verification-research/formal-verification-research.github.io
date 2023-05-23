@@ -47,19 +47,17 @@ def fix_special(s):
   s = s.replace('\\"o', "&ouml;")
   s = s.replace('\\"u', "&uuml;")
 
-
   s = s.replace('\\vr', "r")
-
 
   return s
   
 
 
 
-bibfile = input("Name of the input bibtex file: ")
+bibfile = input("Name of the input bibtex file (probably zotero.bib): ")
 # template = input("Name of the HTML template file: ")
-template = "index.txt"
-outfile = input("Name of the desired output HTML file: ")
+template = input("Name of the template HTML file (probably template.txt): ")
+outfile = input("Name of the desired output HTML file (probably ../index.html): ")
 
 with open(bibfile, 'r') as bibtex_file:
   bib_database = bibtexparser.load(bibtex_file)

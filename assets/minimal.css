@@ -260,17 +260,22 @@ h2 a {
 	line-height:1.8em;
 }
 
+.student {
+	font-size:1.1em;
+	line-height:1.5em;
+}
+
 /* HEADER FOR DIFFERENT SCREEN SIZES */
 
 /*SMALL SCREENS*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 	.big-title {
 		width: 95%;
-		margin: 20px auto 40px auto;
+		margin: 50px auto 40px auto;
 		text-align: center;
 	}
 	.big-title img {
-		margin-top: 20px;
+		/* margin-top: 20px; */
 		margin-bottom:12px;
 		width: 100px;
 		max-width: 70%;
@@ -282,7 +287,7 @@ h2 a {
 		font-size: 2.1em;
 		font-weight: bold;
 		color: #163b41;
-		margin:7px 0 0 0 ;
+		margin:0;
 		
 	}
 	.big-title h2 {
@@ -297,27 +302,66 @@ h2 a {
 		font-weight: normal;
 		font-size: 1em;
 		color:gray;
+		margin-top:0;
 	}
   
-  .side_img {
+  /* .side_img {
     display: block;
   }
   .side_img .slimg {
     max-width:30%;
     width:130px;
-    margin:0 auto;
+    margin:0;
   }
   .side_img .slimg img {
     width:100%;
   }
   .side_img p {
     padding-top:0 !important;
+  } */
+
+  .side_img {
+    display: flex;
   }
-  
+  .side_img .slimg {
+    order:1;
+    float:left;
+    width:16%;
+    min-width:110px;
+    margin-right:15px;
+	margin-top: 12px;
+  }
+  .side_img .slimg img {
+    width:100%;
+  }
+  .side_img p {
+    order:2;
+    margin-top:0;
+  }
+
+  .side_img_student {
+    display: flex;
+	margin: 10px 0 5px 0;
+  }
+  .side_img_student .slimg {
+    order:1;
+    float:left;
+    width:8%;
+    min-width:90px;
+    margin-right:15px;
+  }
+  .side_img_student .slimg img {
+    width:100%;
+  }
+  .side_img_student p {
+    order:2;
+    margin-top:0;
+  }
+
 }
 
 /*BIG SCREENS*/
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
 	.big-title {
 		max-width: 95%;
 		margin: 20px auto 40px auto;
@@ -375,6 +419,7 @@ h2 a {
     width:16%;
     min-width:110px;
     margin-right:15px;
+	margin-top:4px;
   }
   .side_img .slimg img {
     width:100%;
@@ -384,6 +429,32 @@ h2 a {
     margin-top:0;
   }
 
+  .side_img_student {
+    display: flex;
+	width: 48%;
+	margin-right: 2%;
+	float:left;
+	margin: 15px 2% 15px 0;
+  }
+  .side_img_student .slimg {
+    order:1;
+    float:left;
+    width:8%;
+    min-width:90px;
+    margin-right:15px;
+  }
+  .side_img_student .slimg img {
+    width:100%;
+  }
+  .side_img_student p {
+    order:2;
+    margin-top:0;
+  }
+}
+
+.row {
+	clear: both;
+	display:block;
 }
 
 /* Making the copy button work: */
@@ -392,6 +463,9 @@ textarea {
   left: -200%;
 }
 
+#years {
+	line-height: 2.1em;
+}
 
 #years a {
 	background:#baebf3;
@@ -416,4 +490,15 @@ a.pubtop {
 	float: right;
 	margin-top: 2.8em;
 	margin-right: 10px;
+}
+
+hr.studentHR {
+	/* border-bottom: 1px dotted #cccccc;
+	border: 0 0 1px 0 dotted red; */
+	/* color:red; */
+	border-top:0;
+	border-right:0;
+	border-left:0;
+	border-bottom: 1px solid #ccc;
+	clear:both;
 }
