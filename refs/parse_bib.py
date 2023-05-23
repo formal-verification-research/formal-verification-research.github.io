@@ -56,7 +56,7 @@ def fix_special(s):
 
 bibfile = input("Name of the input bibtex file (probably zotero.bib): ")
 # template = input("Name of the HTML template file: ")
-template = input("Name of the template HTML file (probably template.txt): ")
+template = input("Name of the template HTML file (probably template.html): ")
 outfile = input("Name of the desired output HTML file (probably ../index.html): ")
 
 with open(bibfile, 'r') as bibtex_file:
