@@ -3,7 +3,6 @@ import bibtexparser
 from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.bibdatabase import BibDatabase
 
-
 def fix_special(s):  
   s = s.replace("\\textbf", "")
   s = s.replace("{", "")
@@ -48,6 +47,7 @@ def fix_special(s):
   s = s.replace('\\"u', "&uuml;")
 
   s = s.replace('\\vr', "r")
+  s = s.replace('\\&', "&amp;")
 
   return s
   
@@ -144,6 +144,16 @@ with open(outfile, 'w') as new:
       _url = '<a href="' + _url + '" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;'
     else:
       _url = "&nbsp;&nbsp;Link Unavailable&nbsp;&nbsp;"
+    _annotationLink = ""
+    if "annotation" in bib.keys():
+      _annotation = bib["annotation"]
+      annotationSplit = _annotation.split(" ")
+      for i in range(len(annotationSplit)-1):
+        if "Artifact:" in annotationSplit[i]:
+          artifactLink = annotationSplit[i+1]
+          _annotationLink = '<a href="' + artifactLink + '" target="_blank">View Artifact&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;'
+          _url = _url + "\n\t\t\t\t\t" + _annotationLink
+          break
     _authors = fix_special(_authors)
     _pub = fix_special(_pub)
     _title = fix_special(_title)
