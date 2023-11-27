@@ -8,8 +8,6 @@ def fix_special(s):
   s = s.replace("{", "")
   s = s.replace("}", "")
 
-  s = s.replace('~', " ")
-  
   s = s.replace("\\'a", "&aacute;")
   s = s.replace("\\'e", "&eacute;")
   s = s.replace("\\'i", "&iacute;")
@@ -46,6 +44,8 @@ def fix_special(s):
   s = s.replace('\\"o', "&ouml;")
   s = s.replace('\\"u', "&uuml;")
 
+  s = s.replace('~', " ")
+  
   s = s.replace('\\vr', "r")
   s = s.replace('\\&', "&amp;")
 
@@ -60,7 +60,8 @@ template = input("Name of the template HTML file (probably template.html): ")
 outfile = input("Name of the desired output HTML file (probably ../index.html): ")
 
 with open(bibfile, 'r') as bibtex_file:
-  bib_database = bibtexparser.load(bibtex_file)
+  # bib_database = bibtexparser.load(bibtex_file)
+  bib_database = bibtexparser.bparser.BibTexParser(common_strings=True).parse_file(bibtex_file)
 
 sorted_bib_html = []
 years = []
@@ -175,10 +176,12 @@ with open(outfile, 'w') as new:
       this_bib = {}
       this_bib["year"] = int(_year)
       this_bib["key"] = _id
+      this_bib["title"] = _title
       this_bib["html"] = x
       sorted_bib_html.append(this_bib)
     print("completed " + _id)
-  sorted_bib_html = sorted(sorted_bib_html, key=lambda k: k['key'].lower())
+  # sorted_bib_html = sorted(sorted_bib_html, key=lambda k: k['key'].lower())
+  sorted_bib_html = sorted(sorted_bib_html, key=lambda k: k['title'].lower())
   sorted_bib_html.reverse()
   sorted_bib_html = sorted(sorted_bib_html, key=lambda k: k['year'])
   sorted_bib_html.reverse()
