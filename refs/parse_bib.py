@@ -53,14 +53,11 @@ def fix_special(s):
   
 
 
-
 bibfile = input("Name of the input bibtex file (probably zotero.bib): ")
-# template = input("Name of the HTML template file: ")
 template = input("Name of the template HTML file (probably template.html): ")
 outfile = input("Name of the desired output HTML file (probably ../index.html): ")
 
 with open(bibfile, 'r') as bibtex_file:
-  # bib_database = bibtexparser.load(bibtex_file)
   bib_database = bibtexparser.bparser.BibTexParser(common_strings=True).parse_file(bibtex_file)
 
 sorted_bib_html = []
@@ -70,15 +67,6 @@ with open("../refs.bib", "w") as newbib:
   texwriter = BibTexWriter()
   texwriter.indent = "\t"
   newbib.write(texwriter.write(bib_database))
-  # newbib.write("\t\t\t\t\t\t" + texwriter.write(bib_database).replace("\n","\n\t\t\t\t\t\t"))
-
-# with open("sorted2.bib", "w") as newbib:
-#   for bib in bib_database.entries:
-#     db = BibDatabase()
-#     db.entries = [bib]
-#     texwriter = BibTexWriter()
-#     texwriter.indent = "\t\t\t\t\t\t"
-#     newbib.write(texwriter.write(db))
 
 
 with open(outfile, 'w') as new:
