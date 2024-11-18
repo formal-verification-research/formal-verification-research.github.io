@@ -43,10 +43,13 @@ def fix_special(s):
   s = s.replace('\\"i', "&iuml;")
   s = s.replace('\\"o', "&ouml;")
   s = s.replace('\\"u', "&uuml;")
-
+  
   s = s.replace('~', " ")
   
-  s = s.replace('\\vr', "r")
+  s = s.replace('\\v r', "&rcaron;")
+  s = s.replace('\\v C', "&Ccaron;")
+  s = s.replace('\\v s', "&scaron;")
+  
   s = s.replace('\\&', "&amp;")
 
   return s
