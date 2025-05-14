@@ -2,6 +2,7 @@ from cgitb import text
 import bibtexparser
 from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.bibdatabase import BibDatabase
+import sys
 
 def fix_special(s):  
   s = s.replace("\\textbf", "")
@@ -56,9 +57,15 @@ def fix_special(s):
   
 
 
-bibfile = input("Name of the input bibtex file (probably zotero.bib): ")
-template = input("Name of the template HTML file (probably template.html): ")
-outfile = input("Name of the desired output HTML file (probably ../index.html): ")
+if len(sys.argv) == 4:
+  bibfile = sys.argv[1]
+  template = sys.argv[2]
+  outfile = sys.argv[3]
+else:
+  print("Usage: python parse_bib.py <input_bibtex_file> <template_html_file> <output_html_file>")
+  bibfile = input("Name of the input bibtex file (probably zotero.bib): ")
+  template = input("Name of the template HTML file (probably template.html): ")
+  outfile = input("Name of the desired output HTML file (probably ../index.html): ")
 
 with open(bibfile, 'r') as bibtex_file:
   bib_database = bibtexparser.bparser.BibTexParser(common_strings=True).parse_file(bibtex_file)
@@ -182,6 +189,8 @@ with open(outfile, 'w') as new:
   new.write('\t\t\t\t</p>\n\n')
 
   new.write('\t\t\t\t<p id="years">\n')
+  years.reverse()
+  print("Years: " + str(years))
   for yr in years:
     new.write('\t\t\t\t\t<a href="#' + str(yr) + '">' + str(yr) + '</a>\n')
   new.write("\t\t\t\t</p>\n\n")
