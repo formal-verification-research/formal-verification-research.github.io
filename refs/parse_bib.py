@@ -104,6 +104,10 @@ with open(outfile, 'w') as new:
       _pub = bib["howpublished"]
     elif "series" in bib.keys():
       _pub = bib["series"]
+    elif "publisher" in bib.keys():
+      _pub = bib["publisher"]
+      if _pub == "arXiv":
+        _pub = "arXiv preprint"
     else:
       _pub = "PUB EXCEPTION___"*100
     if "author" in bib.keys():
@@ -142,7 +146,7 @@ with open(outfile, 'w') as new:
       _url = "https://doi.org/" + bib["doi"]
       _url = '<a href="' + _url + '" target="_blank">View Paper&nbsp;<i class="fas fa-external-link-alt"></i></a>&nbsp;'
     else:
-      _url = "&nbsp;&nbsp;Link Unavailable&nbsp;&nbsp;"
+      _url = ""
     _annotationLink = ""
     if "annotation" in bib.keys():
       _annotation = bib["annotation"]
