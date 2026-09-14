@@ -1,4 +1,3 @@
-from cgitb import text
 import bibtexparser
 from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.bibdatabase import BibDatabase
